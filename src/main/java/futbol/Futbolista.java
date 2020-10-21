@@ -1,6 +1,7 @@
 package futbol;
+import java.lang.Comparable;
 
-public abstract class Futbolista implements Comparable{
+public abstract class Futbolista implements Comparable<Object>{
 	private String nombre;
 	private int edad;
 	private final String posicion;
@@ -24,6 +25,7 @@ public abstract class Futbolista implements Comparable{
 	}
 	
 	public abstract boolean jugarConLasManos();
+	
 
 	
 	public String toString() {

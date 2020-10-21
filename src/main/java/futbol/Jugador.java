@@ -1,6 +1,7 @@
 package futbol;
 
-public abstract class Jugador extends Futbolista{
+
+public class Jugador extends Futbolista{
 	public short golesMarcados;
 	public byte dorsal;
 	public Jugador(String nombre, int edad, String posicion, short golesMarcados, byte dorsal) {
@@ -15,13 +16,21 @@ public abstract class Jugador extends Futbolista{
 		dorsal = 7;
 	}
 	
-	public  int compareTo(Futbolista f) {
-		return this.getEdad() - f.getEdad();
+	public int compareTo(Object f) {
+		
+		return (this.getEdad() - ((Futbolista)f).getEdad());
+
+		
 	}
 	
 	public String toString() {
 		return "El futbolista " + super.getNombre() + " tiene " + super.getEdad() + " y juega de " + super.getPosicion() + " con el dorsal "  + dorsal + ". Ha marcado " + golesMarcados;
 	}
 	
+	public boolean jugarConLasManos() {
+		return false;
+	}
+
+
 
 }
